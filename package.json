@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "npx eslint src && npx jasmine"
   },
@@ -18,7 +19,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^5.1.0",
-    "jasmine": "^3.10.0",
+    "jasmine": "^5.0.1",
     "nodemon": "^2.0.13",
     "prettier": "^2.6.2"
   }
