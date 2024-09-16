@@ -1,1 +1,12 @@
 // Add your domain model below
+
+| Methods         | Inputs                                            | Data                                                        | Scenario                                                              | Outputs                                    |
+|-----------------|---------------------------------------------------|-------------------------------------------------------------|-----------------------------------------------------------------------|--------------------------------------------|
+| create(todo)    | @string that is the description of the todo       | toDo(@object){ id: @number, toDo:@string, status:@string}   | add new toDo's to the toDo object with a new id and incomplete status | toDo(@object)                              |
+| get()           | empty                                             | [toDo(@object){ id: @number, toDo:@string, status:@string}] | the method is called                                                  | [toDo(@object)]                            |
+| setDone(id)     | @number that is the id of the todo to be set done | toDo(@object){ id: @number, toDo:@string, status:@string}   | change the todo called by id to complete                              | toDo(@object)                              |
+| getIncomplete() | empty                                             | [toDo(@object){ id: @number, toDo:@string, status:@string}] | the method is called                                                  | [toDo(@object)] (The status is incomplete) |
+| getComplete()   | empty                                             | [toDo(@object){ id: @number, toDo:@string, status:@string}] | the method is called                                                  | [toDo(@object)] (The status is complete)   |
+| getById(id)     | @number of the todo to be returned                | toDo(@object){ id: @number, toDo:@string, status:@string}   | The id is included in the array                                       | toDo(@object)                              |
+|                 |                                                   |                                                             | the id is not included in the array                                   | @string(The todo does not exist)           |
+| delete(id)      | @number of the todo to be delete                  | toDo(@object){ id: @number, toDo:@string, status:@string}   | The id is passed through the method that gets called                  | [toDo(@object)] (The array gets smaller)   |
